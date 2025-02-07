@@ -32,5 +32,5 @@ for epoch in range(400):
     w,b = grad_descent(x, y, w, b, learning_rate)
     yhat = w*x+b
     loss = np.divide(np.sum((y-yhat)**2, axis=0),x.shape[0])
-    print(f'{epoch} loss is loss {loss}, parameters w: {w}, b:{b}')
+    print(f'{epoch} loss is {loss}, parameters w: {w}, b:{b}')
     pass
