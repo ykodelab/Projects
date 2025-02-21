@@ -41,10 +41,55 @@ public class DoublyLinkedList {
         head = node;
     }
 
+    public void deleteAt(int index) {
+
+        if(index == 0 ) {
+            head = head.next;
+            head.prev = null;
+        }
+
+        else {
+            Node n = head;
+            for (int i = 0; i < index -1; i++) {
+                n = n.next;
+            }
+            Node temp_n = n.next;
+            n.next = temp_n.next;
+            n.next.prev = n;
+            n.next.next = null;
+
+        }
+
+
+
+    }
+
+    public void insertAt(int index, int data) {
+        Node node = new Node();
+        node.data = data;
+
+        if (index == 0) {
+            insertAtStart(node.data);
+        } else {
+            Node n = head;
+            for(int i =0; i <index-1; i++) {
+                n = n.next;
+            }
+            node.next = n.next;
+            n.next.prev = node;
+            n.next = node;
+            node.prev = n;
+            
+        }
+
+    }
+    
+
+    }
 
 
 
 
 
 
-}
+

@@ -6,6 +6,9 @@ public class Main {
         dll.insertAtEnd(4);
         dll.insertAtEnd(6);
         dll.insertAtStart(2);
+        dll.insertAt(2, 124);
+        dll.show();
+        dll.deleteAt(2);
         dll.show();
 
 

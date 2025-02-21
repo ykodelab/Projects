@@ -1,0 +1,31 @@
+public class DynamicStack extends Stack {
+
+    capacity = 2;
+    stack  = new int[capacity];
+
+
+    @Override
+    public void push(int data) {
+
+        if(size() == capacity) {
+            expand(); //helper fnc
+        }
+        stack[top] = data;
+        top ++;
+    }
+
+    private void expand() {
+        int length = size();
+        int newStack[] = new int[capacity*2];
+
+        System.arraycopy(stack, 0, newStack, 0, length);
+        stack = newStack;
+        capacity *= 2;
+    
+    }
+
+
+
+
+
+}
