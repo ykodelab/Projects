@@ -1,6 +1,9 @@
 # Gradient Descent for Linear Regression
 # yhat = mx + b
 # loss = (y-yhat)**2 / N
+
+#Fundls:
+
 import numpy as np
 
 x = np.random.randn(10,1)
